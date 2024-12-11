@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(245, 240, 240, 0.602);
+}
+body, html {
+    margin: 0;  /* Removes margin around the body and html */
+    padding: 0; /* Removes padding around the body and html */
+    width: 100%; /* Ensures the body takes the full width of the viewport */
+}
+
+header {
+    background: #f1f1f1;
+    padding: 10px 20px;
+    text-align: center;
+}
+h1 {
+    text-align: center; /* Centers the text horizontally */
+    font-size: 56px; /* Increases the font size; adjust as needed */
+    margin-top: 20px; /* Adds space above the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+    /* background-color: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 20px; */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    margin-left: 2%;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight {
+    background-color: rgba(245, 240, 240, 0.602);
+
+    text-align: center;
+    padding: 0;
+}
+
+.highlight img {
+    width: 100%; /* Adjust based on actual image dimensions */
+    height: auto;
+}
+
+.highlight p {
+    font-size: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: yellow; /* Bootstrap blue */
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #cccc00; /* Darker blue */
+}
+
+.features img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.highlight .image-container {
+    white-space: nowrap; /* Prevents the images from wrapping onto the next line */
+    overflow-x: auto;    /* Adds a horizontal scrollbar if the container width is exceeded */
+    width: 100%;         /* Sets the width of the container to fill the parent */
+    font-size: 0;        /* Removes space between inline-block elements */
+}
+
+.highlight .image-container img {
+    display: inline-block; /* Display images inline-block for better control */
+    width: 30%;          /* Each image takes up 30% of the container width */
+    height: 200px;       /* Fixed height for all images */
+    object-fit: cover;   /* Ensures the images cover the area without distorting aspect ratio */
+    margin-right: 10px;  /* Space between images */
+}
+
+/* Removes margin from the last image */
+.highlight .image-container img:last-child {
+    margin-right: 0;
+}
+
+
+
+.highlight {
+    width: 100%; /* Ensures the highlight section takes full width */
+    text-align: center; /* Centers the text and buttons */
+    padding: 20px 0; /* Adds padding top and bottom only */
+}
+
+.highlight .image-container {
+    width: 100%;  /* Full width to stretch across the screen */
+    display: flex; /* Uses flexbox to manage image layout */
+    justify-content: space-between; /* Distributes space between elements */
+}
+
+.highlight .image-container img {
+    flex: 1;  /* Allows each image to grow and fill the container */
+    max-width: 33.333%; /* Maximum width for each image when three images are present */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Cover the area of each flex item */
+    padding: 0; /* No padding */
+}
+
+p {
+    background-color: darkgrey; /* Sets the background color to red */
+    color: white; /* Sets the text color to white */
+    padding: 20px; /* Increases padding around the text */
+    font-size: 100px; /* Increases the font size */
+    margin: 20px 0; /* Maintains vertical spacing */
+}
+
+button {
+    margin: 10px; /* Adds margin around buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS Detection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+
+            padding: 20px;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #FF5F6D, #FFC371); /* Sweet Morning Gradient */
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        textarea {
+            width: 100%; /* Full width to fit container */
+            min-height: 100px; /* Adjusted height */
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #FFC371; /* Border color to match the gradient */
+            border-radius: 5px; /* Consistent rounded corners */
+            box-sizing: border-box; /* Includes padding in width */
+            resize: vertical; /* Only vertical resize */
+            font-size: 16px; /* Readable font size */
+        }
+        button {
+            background-color: #FF5F6D; /* Pink shade of the gradient */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; /* Consistent margin top */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+        button:hover {
+            background-color: #E04D67; /* A darker shade for hover state */
+        }
+        label {
+            font-size: 18px; /* Larger label for prominence */
+            color: #333; /* Dark color for contrast */
+            display: block; /* Ensure it appears on a new line */
+            margin-bottom: 5px; /* Space before the textarea */
+        }
+        h1, h2 {
+            margin-top: 20px;
+            color: #5C4B51; /* Consistent text colors */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>News Detection System</h1>
+        <form action="/predict" method="post">
+            <label for="news">Enter your news:</label>
+            <textarea id="news" name="news" placeholder="Type your news here..." required></textarea>
+            <button type="submit">Predict News</button>
+        </form>
+        {% if prediction %}
+            <h2>Prediction: {{ prediction }}</h2>
+            <h2>Statement: {{ statement }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
